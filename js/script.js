@@ -54,6 +54,7 @@ document.getElementById('colorIt').addEventListener('click',function(){
 document.getElementById('showGrade'). addEventListener('click', function (){
 
   var result = document.getElementById('result');
+  var name = document.getElementById('name').value;
 
   var mod1 = parseInt(document.getElementById('mod1').value);
   var mod2 = parseInt(document.getElementById('mod2').value);
@@ -69,15 +70,15 @@ document.getElementById('showGrade'). addEventListener('click', function (){
 
   if (average < 50) {
     console.log('it is less than 50');
-    document.getElementById('exampleModalLabel').innerHTML = 'Sorry';
+    document.getElementById('exampleModalLabel').innerHTML = 'Sorry ' + name;
     result.innerHTML += 'You have failed this programme of study';
   } else if (average < 80) {
     console.log('it is between 50 and 79');
-    document.getElementById('exampleModalLabel').innerHTML = 'Cool';
+    document.getElementById('exampleModalLabel').innerHTML = 'Cool ' + name;
     result.innerHTML += 'You have passed this programme of study';
   } else {
     console.log('it is greater than or equal to 80');
-    document.getElementById('exampleModalLabel').innerHTML = 'Congratulation';
+    document.getElementById('exampleModalLabel').innerHTML = 'Congratulation ' + name;
     result.innerHTML += 'You have passed this programme of study with distinction';
   }
 
